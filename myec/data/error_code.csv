@@ -1,0 +1,26 @@
+400,Bad Request
+403,Please login again
+500,An error occurred
+1101,Login failed
+1102,"Sorry, you need to be an EFEC student to use this app!"
+1103,Incorrect host
+1104,User name or password is incorrect.
+1110,Image upload failed
+1111,Image download failed
+1200,Please update you app to the latest version
+1300,Invalid operation
+2000,Invalid parameters
+2001,"Sorry, this class hasn't been booked by anyone"
+2002,"Sorry, this student didn't book this class"
+2003,"Sorry, this class has already been checked in"
+2004,"Sorry, there are no seats left"
+2005,"Sorry, you are unable to adjust this class"
+2006,Initial level has not been set
+2007,This account type is not supported
+2008,This account is not active
+2009,"Sorry, your account is unable to book this class"
+2010,"Sorry, our app doesn't support your course"
+2011,This account type is not supported
+2012,QR code is invalid or expired
+2013,Seat is already taken by another student. Better luck next time.
+2014,Invalid booking status for grabbing.
