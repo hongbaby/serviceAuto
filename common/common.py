@@ -47,11 +47,13 @@ def compare_error_code_and_error_description(dict):
     if error_code:
         err_description = dict[JSONResponse.ERROR_DESCRIPTION]
         verify_error_description(error_code, err_description)
+    else:
+        print "Login successfully."
 
 
 def verify_error_description(error_code, error_description):
     current_path = os.getcwd()
-    thePath = current_path[:current_path.find("serviceAuto\\") + 12]
+    thePath = current_path[:current_path.find("serviceAuto\\") + len("serviceAuto") + 1]
 
     with open(os.path.dirname(thePath) + "\myec\data\error_code.csv", 'r') as csvfile:
         csvfile.readline()
