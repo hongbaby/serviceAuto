@@ -106,3 +106,41 @@ def verify_error_description(error_code, error_description):
                     print "Assertion error: the expected error_description is: %s; " \
                           "While the actual error description is: %s" % (description, error_description)
                 break
+
+
+def get_specfic_value_from_multiple_nest_dict(dic={}, key_name=''):
+    if isinstance(dic, dict):
+        for k in dic.iterkeys():
+            if k == key_name:
+                print key_name
+                return key_name
+            else:
+                if isinstance(dic[k], dict):
+                    for i in dic[k].iterkeys():
+                        if i == key_name:
+                            print dic[k][i]
+                            return key_name
+                        else:
+                            print dic[k][i]
+                            return get_specfic_value_from_multiple_nest_dict(dic[k][i], key_name)
+
+print get_specfic_value_from_multiple_nest_dict(dic={
+    "serviceResponse": {
+        "header": {
+            "errorCode": 0,
+            "errorDescription": "demo description",
+            "lastUpdate": 12345678
+        },
+        "body": {
+            "mySettings":
+
+                    {
+                        "name": "contacus",
+                        "displayName": "Contact Us",
+                        "targetData": "contactus"
+                    }
+
+
+        }
+    }
+}, key_name='displayName')
