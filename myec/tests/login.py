@@ -1,6 +1,6 @@
 import unittest
 from common.common import connect_and_send_requests
-from myec.business_common.Utility import HEADER, ServiceURLs, ServiceRequestMethod
+from myec.business_common.Utility import HEADER1, ServiceURLs, ServiceRequestMethod
 
 
 class LoginRelated(unittest.TestCase):
@@ -11,7 +11,7 @@ class LoginRelated(unittest.TestCase):
     def test_login_with_expired_account(self, username='stest12787', password='1'):
         body = {
             "serviceRequest": {
-                "header": HEADER,
+                "header": HEADER1,
                 "body": {
                     "userName": username,
                     "password": password
@@ -24,7 +24,7 @@ class LoginRelated(unittest.TestCase):
     def test_login_with_other_partner_account(self, username='stest12116', password='1'):
         body = {
             "serviceRequest": {
-                "header": HEADER,
+                "header": HEADER1,
                 "body": {
                     "userName": username,
                     "password": password
@@ -37,7 +37,7 @@ class LoginRelated(unittest.TestCase):
     def test_login_with_invalid_account(self, username='stest12116', password='5'):
         body = {
             "serviceRequest": {
-                "header": HEADER,
+                "header": HEADER1,
                 "body": {
                     "userName": username,
                     "password": password
@@ -50,7 +50,7 @@ class LoginRelated(unittest.TestCase):
     def test_login_with_valid_account(self, username='stest12798', password='1'):
         body = {
             "serviceRequest": {
-                "header": HEADER,
+                "header": HEADER1,
                 "body": {
                     "userName": username,
                     "password": password
